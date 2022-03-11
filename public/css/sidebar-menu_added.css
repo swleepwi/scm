@@ -1,0 +1,184 @@
+.animate-menu {
+    border-right: solid 1px #ccc !important;
+}
+
+.sidebar-menu {
+    background-color: #fff !important;
+    margin-top: 34px !important;
+}
+
+.sidebar-menu > li {
+    border-top: none !important;
+    border-bottom: none !important;
+    background: #fff !important;
+}
+.sidebar-menu > li > a {
+    color: #333 !important;
+    font-size: 13px !important;
+}
+
+.sidebar-menu > li:hover > a, .sidebar-menu > li.active > a {
+    color: #333 !important;
+    /*background: #00b7c2  !important;*/
+    background: #eee  !important;
+    border-left-color: inherit !important;
+}
+.sidebar-menu > li > a {
+
+    border-left: none !important; 
+}
+
+.sidebar-menu > li {
+    height: 31px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.sidebar-menu > li > a {
+    font-weight: bold !important;    
+    padding-left: 7px !important;
+}
+
+
+.div_menu{
+    height: 77px;
+    /*background-color: #00b7c2;*/
+    background-color: #fff;
+
+    
+    background-image: url(../img/parkland_logo_new.png);
+    background-repeat: no-repeat;
+    background-size: auto 76%;
+    background-position: 47px 11px;
+
+}
+.menu_toggle{
+    padding-top: 9px !important;
+    color: #fff !important;
+    position: absolute;
+    margin-left: 6px;
+    text-align: center;
+    font-size: 21px;
+    cursor: pointer;
+    padding-left: 5px !important;
+}
+
+.navbar-inverse .brand, .navbar-inverse .nav>li>a {
+    color: #fff !important;
+}
+.nav li.dropdown>.dropdown-toggle .caret {
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+.putih{
+    color:#fff !important;
+}
+
+.animate-menu-push.animate-menu-push-right {
+    width: calc(100% - 200px) !important;
+    min-width: calc(1280px - 200px) !important;
+}
+.scmsys{
+    height: 22px;
+    margin-top: 8px;
+}
+.content_title{
+    font-size: 12px !important;
+    color: #2f3a57 !important;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.title_content{
+    background: #ffffff;
+    border-left: solid 1px #ccc;
+}
+.icon_title_content{
+    font-size: 14px !important;
+    font-weight: 600 !important;
+
+}
+.wide_div{
+    width: 100% !important;
+    position: relative;
+    display: inline-block;
+    height: 35px;
+}
+.second{
+    left: 0px !important;
+    top: -2px !important;;
+}
+.tableTanggung{
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+.table_search{
+    margin-top: 14px;
+}
+.btn_pwi{
+    background-color: #00b7ff;
+    border: none;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 10px;
+    color: #000;
+    text-transform: uppercase !important;
+}
+#user-nav > ul > li > span {
+    padding: 9px 10px !important;
+    display: block !important;
+    color: #ffffff !important;
+    font-size: 15px;
+    font-weight: bold;nt;
+}
+.widget_title_white{
+    /*background-color: #00b7c2 !important;*/
+    background-color: #2f3a57 !important;
+    
+}
+.row{
+    padding-left: 30px !important;
+}
+.dataTables_info {
+    margin-left: 70px !important;
+    position: absolute;
+    bottom: 9px;
+}
+.dataTables_paginate {
+    position: absolute !important;
+    right: 10px !important;
+    bottom: 10px !important;
+}
+.dataTables_length label select {
+    width: 50px !important;
+    font-size: 10px !important;
+}
+.searh_input{
+    padding: 0;
+    margin:0;
+}
+.searh_input li{
+    list-style-type: none !important;    
+    display: inline-block;
+}
+.searh_input li span{
+    margin-right: 10px;
+}
+.bottom10{
+    margin-bottom: 10px;
+}
+.search_input_div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 3px !important;
+}
+.dataTables_paginate .ui-button, .pagination.alternate li a {
+    font-size: 10px !important;
+    padding: 1px 4px !important
+}
+.text-right{
+    text-align: right !important;
+}
+.bottom {
+    border-top: solid 1px #ddd !important;
+}
