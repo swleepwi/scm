@@ -197,20 +197,15 @@
 <div id="detailInsert">
 	<div id="blocker"></div>
 
-
-
-
-
 </div>
+
 <div class="container-fluid">
-
-
 	<div class="row-fluid">
 		<div class="widget-box">
 			<div class="widget-title widget_title_white">
 				<h5>Search PO</h5>
 				<div class='export_table'>
-
+          <input type="text" name="bar_no" id="bar_no" placeholder="Barcode Number" style="width:200px">
 					<input type="text" name="po_no" id="po_no" placeholder="PO Number" style="width:200px">
 					<input type="text" name="o_no" id="o_no" placeholder="Order Number" style="width:100px; margin-left:10px">
 					<button type="button" value="Save" onclick="searchPO();" class="btn-small btn-mini btn_pwi" style="margin-bottom: 10px;"><i class="icon-zoom-in"></i> Search</button>
@@ -661,7 +656,7 @@ $(document).ajaxStart(function(){
 	function searchPO()
     {
 
-
+    var bar_no = $("#bar_no").val();
 		var po_no = $("#po_no").val();
 		var o_no = $("#o_no").val();
 		if(po_no == "") {
@@ -671,9 +666,11 @@ $(document).ajaxStart(function(){
 		if(o_no == "") {
 			o_no = 0;
 		}
+    if(bar_no == "") {
+			bar_no = 0;
+		}
 
-
-		gridPO.ajax.url("{{url('/')}}/dncreate/searchpo/"+po_no+"/"+o_no).load(null, false);
+		gridPO.ajax.url("{{url('/')}}/dncreate/searchpo/"+po_no+"/"+o_no+"/"+bar_no).load(null, false);
 		$("#span-type").html("Request");
 
 		setTimeout(function(){

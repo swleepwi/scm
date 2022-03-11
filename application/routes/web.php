@@ -47,7 +47,7 @@ Route::get('/dnview/sizelist/{po_number}/{seq_number}', 'DeliveryNoteController@
 Route::get('/dncreate/new/{out_no?}/{out_date?}', 'DeliveryNoteController@create');
 Route::post('/dncreate/savemaster', 'DeliveryNoteController@saveMaster');
 Route::get('/dncreate/detailcreatelist/{out_date}/{out_number}', 'DeliveryNoteController@detailCrateList');
-Route::get('/dncreate/searchpo/{po_number}/{order_number}', 'DeliveryNoteController@searchPOToAdd');
+Route::get('/dncreate/searchpo/{po_number}/{order_number}/{barcode_number}', 'DeliveryNoteController@searchPOToAdd');
 Route::post('/dncreate/adddetail', 'DeliveryNoteController@insertDetailDN');
 Route::post('/dncreate/deleteinserted', 'DeliveryNoteController@deleteInserted');
 Route::post('/dncreate/deletemaster', 'DeliveryNoteController@deleteMaster');
