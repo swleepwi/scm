@@ -198,21 +198,6 @@
 	<div id="blocker"></div>
 
 </div>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="widget-box">
-			<div class="widget-title widget_title_white">
-				<h5>SCAN LABEL</h5>
-				<div class='export_table'>
-          <input type="text" name="bar_no_scan" id="bar_no_scan" placeholder="Barcode Number" style="width:200px">
-
-					<button class="btn-small btn-mini btn_pwi" id="add_btn" onclick="lblAdd()" style="margin-bottom: 10px" ><i class="icon icon-plus"></i> Add</button>
-				</div>
-			</div>
-		</div>
-		<br/>
-	</div>
-</div>
 
 <div class="container-fluid">
 	<div class="row-fluid">
@@ -224,7 +209,7 @@
 					<input type="text" name="po_no" id="po_no" placeholder="PO Number" style="width:200px">
 					<input type="text" name="o_no" id="o_no" placeholder="Order Number" style="width:100px; margin-left:10px">
 					<button type="button" value="Save" id="search_btn" onclick="searchPO();" class="btn-small btn-mini btn_pwi" style="margin-bottom: 10px;"><i class="icon-zoom-in"></i> Search</button>
-					<button class="btn-small btn-mini btn_pwi" id="add_btn" onclick="addChecked()" style="margin-bottom: 10px" ><i class="icon icon-plus"></i> Add</button>
+					<button class="btn-small btn-mini btn_pwi" onclick="addChecked()" style="margin-bottom: 10px" ><i class="icon icon-plus"></i> Add</button>
 				</div>
 			</div>
 
@@ -726,57 +711,7 @@ $(document).ajaxStart(function(){
 			}
 		}
 	}
-  function lblAdd()
-	{
-		//var out_no = '23234234';
-		var out_no = $("#out_no").val();
-		if(out_no !== "")
-		{
-			var out_date_v =  $("#out_date").val().replace(/-/g,"");
 
-      var bar_no = $("#bar_no_scan").val();
-			var wh_v = $("#wh").val();
-			var out_no_v = $("#out_no").val();
-
-
-			$.ajax({
-				type: "POST",
-				url: "{{ url('/') }}/dncreate/adddetail",
-				headers: {
-					'X-CSRF-TOKEN': "{{ csrf_token() }}"
-				},
-				data : {
-					out_date: out_date_v,
-					out_no: out_no_v,
-					wh: wh_v,
-					labels: bar_no,
-				},
-				success: function (json) {
-					if(json.data.ERR_FLAG == "S")
-					{
-						$.bootstrapGrowl("Label(s) Added to detail Delivery Note", {
-							type: "success",offset: {from: 'top', amount: 250},align: 'center'
-						});
-						filterDetail();
-						obj.y = 0;
-						obj.w = -1;
-						//searchPO();
-					}
-					else{
-						$.bootstrapGrowl("Failed to add PO: "+json.data.ERR_MSG, {
-							type: "error",offset: {from: 'top', amount: 250},align: 'center'
-						});
-					}
-				}
-			});
-		}
-		else{
-			$.bootstrapGrowl("You need to create GRN Number, please complete the master entry!", {
-				type: "error",offset: {from: 'top', amount: 250},align: 'center'
-			});
-		}
-    $('#bar_no_scan').val('');
-	}
 	function addChecked()
 	{
 		//var out_no = '23234234';
@@ -933,12 +868,13 @@ $(document).ajaxStart(function(){
 
 	$(document).ready(function(){
 		//
-
-    $("#bar_no_scan").keydown(function(keyNum){
+    $("#bar_no").keydown(function(keyNum){
       //현재의 키보드의 입력값을 keyNum으로 받음
       if(keyNum.keyCode == 13){
-        lblAdd();
-
+        // keydown으로 발생한 keyNum의 숫자체크
+        // 숫자가 enter의 아스키코드 13과 같으면
+        // 기존에 정의된 클릭함수를 호출
+        $("#search_btn").click() 
       }
     });
 
