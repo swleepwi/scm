@@ -70,11 +70,11 @@ return [
 
         'sqlsrv' => [
             'driver' => 'sqlsrv',
-            'host' => '192.168.40.176',
+            'host' => '192.168.**.***',
             'port' => '1433',
-            'database' => 'PWISCM',
-            'username' => 'scm_user',
-            'password' => 'pwj_scm@@',
+            'database' => 'P*****',
+            'username' => 's**_****',
+            'password' => '******',
             'charset' => 'utf8',
             'prefix' => '',
 	    'strict' => false
