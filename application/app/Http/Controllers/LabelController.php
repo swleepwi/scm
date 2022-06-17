@@ -15,7 +15,7 @@ class LabelController extends Controller
         if(!session('pwiscm_logged')) {
             return redirect(url('/'));
         }        
-        
+         
     }
     
     public function index()
