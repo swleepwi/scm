@@ -8,3 +8,6 @@ Mainly for supplier, they have 4 process.
 
 Mainly made in outsourcing company.
 Managing, Fixing bugs and Adding Functions are done by me.
+
+![scm](https://user-images.githubusercontent.com/81747308/174298876-cd42727e-bc4b-484c-8564-3d4caabdf91c.JPG)
+
